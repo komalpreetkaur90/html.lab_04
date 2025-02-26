@@ -45,18 +45,14 @@ form.addEventListener("submit", (event) => {
     console.log("Phone number validated successfully.");
 
     // validate checkbox
-    document.addEventListener("DOMContentLoaded", () => {
-        const checkboxes = document.querySelectorAll('input[name= "eventType"]');
-        console.log("Checkboxes selected:", checkboxes);
-
-        checkboxes.forEach((checkbox) => {
-            checkbox.addEventListener("change", function () {
-                checkboxes.forEach((cb) => {
-                    if (cb !== this) cb.checked = false;
-                })
-            });
-        });
-    })
+    const checkboxes = document.querySelectorAll('input[name="eventType"]');
+    const selectedEvents = Array.from(checkboxes).filter(cb => cb.checked);
+    if (selectedEvents.length === 0) {
+        alert("Please select at least one event type.");
+        return;
+    }
+    nextRegistrationpage();
+;
 
 // Usage in Validation
 if (username == "") {
