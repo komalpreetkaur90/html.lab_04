@@ -44,7 +44,7 @@ form.addEventListener("submit", (event) => {
     }
     console.log("Phone number validated successfully.");
 
-    //  validatation for checkbox
+    // validate checkbox
     document.addEventListener("DOMContentLoaded", () => {
         const checkboxes = document.querySelectorAll('input[name= "eventType"]');
         console.log("Checkboxes selected:", checkboxes);
