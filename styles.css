@@ -67,3 +67,10 @@ input[type="checkbox"] {
     width: auto;
     margin-right: 0.5em;
 }
+
+.error-message {
+	color: red;
+	font-size: 0.875em;
+	display: none;
+  }
+
