@@ -1,7 +1,7 @@
 const form = document.getElementById("EventRegistrationForm");
-const username = form.elements["username"].value;
+const submit = form.elements["Register"].value;
 
-document.getElementById("username").addEventListener("change", (event) => {
+document.getElementById("Register").addEventListener("change", (event) => {
     event.preventDefault();
 });
 
